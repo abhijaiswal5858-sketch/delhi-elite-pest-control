@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Poppins', sans-serif; background: #0b0e11; color: white; overflow-x: hidden; }
+
+/* Header */
+header {
+    padding: 20px 10%; background: rgba(11, 14, 17, 0.9);
+    position: fixed; width: 100%; top: 0; z-index: 1000;
+    display: flex; justify-content: space-between; align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.logo { font-family: 'Orbitron', sans-serif; font-size: 24px; font-weight: bold; color: #fff; }
+.logo span { color: #2ecc71; }
+.nav-links { display: flex; list-style: none; }
+.nav-links li { margin-left: 30px; }
+.nav-links a { color: #bbb; text-decoration: none; transition: 0.3s; font-size: 14px; }
+.nav-links a:hover { color: #2ecc71; }
+
+/* Hero Section with High-End Poster */
+.hero {
+    height: 100vh;
+    background: url('https://images.pexels.com/photos/434337/pexels-photo-434337.jpeg?auto=compress&cs=tinysrgb&w=1600') no-repeat center center/cover;
+    background-attachment: fixed;
+    display: flex; align-items: center; justify-content: center;
+    position: relative; text-align: center;
+}
+.hero-overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.8) 100%);
+}
+.hero-content { position: relative; z-index: 10; padding: 0 20px; }
+.hero-content h1 { font-family: 'Orbitron', sans-serif; font-size: clamp(2rem, 8vw, 4rem); margin-bottom: 20px; color: #fff; }
+.hero-content p { font-size: 1.2rem; margin-bottom: 40px; color: #ccc; max-width: 700px; margin-left: auto; margin-right: auto; }
+
+.btn-primary { background: #2ecc71; color: #fff; padding: 15px 35px; text-decoration: none; border-radius: 50px; font-weight: bold; margin-right: 15px; display: inline-block; transition: 0.3s; }
+.btn-secondary { background: transparent; border: 2px solid #fff; color: #fff; padding: 13px 35px; text-decoration: none; border-radius: 50px; font-weight: bold; display: inline-block; transition: 0.3s; }
+.btn-primary:hover { transform: scale(1.1); box-shadow: 0 0 20px #2ecc71; }
+
+/* Services Glassmorphism */
+.services { padding: 100px 10%; text-align: center; background: #0b0e11; }
+.section-title { font-family: 'Orbitron', sans-serif; margin-bottom: 50px; font-size: 30px; }
+.service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+.glass-card {
+    background: rgba(255, 255, 255, 0.05); padding: 40px; border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+.glass-card:hover { border-color: #2ecc71; transform: translateY(-10px); }
+.glass-card i { font-size: 40px; color: #2ecc71; margin-bottom: 20px; }
+
+/* Booking Section */
+.booking { padding: 100px 10%; background: #0f1217; }
+.booking-container { display: flex; flex-wrap: wrap; gap: 50px; align-items: center; }
+.booking-info { flex: 1; min-width: 300px; }
+.glass-form {
+    flex: 1; min-width: 300px; background: rgba(255,255,255,0.05);
+    padding: 40px; border-radius: 20px; display: grid; gap: 15px;
+}
+input, textarea, select {
+    background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+    padding: 15px; color: white; border-radius: 10px; outline: none;
+}
+.submit-btn { background: #2ecc71; color: white; padding: 15px; border: none; border-radius: 10px; cursor: pointer; font-weight: bold; font-size: 16px; }
+
+footer { padding: 40px; text-align: center; background: #0b0e11; border-top: 1px solid #222; color: #555; }
